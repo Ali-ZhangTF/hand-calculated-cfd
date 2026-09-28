@@ -1,0 +1,39 @@
+cff-version: 1.2.0
+message: "如果你在教学或研究中用到这份材料，请按本文件的信息引用。"
+title: "手算复现 CFD：把 Fluent 的黑箱拆开"
+abstract: >-
+  用 3×3 网格、21 个未知数的规模，把计算流体力学从 Navier-Stokes 方程到数值解的
+  全过程完整手算一遍。含顶盖驱动空腔流（Re=100，交错网格 SIMPLE）与
+  锂电池-冷板-冷却水共轭传热两个算例，给出每一轮迭代的系数、右端项与解。
+  第 1 轮迭代存在解析解 u* = U/21、3U/21、8U/21，可作为手算校验锚点。
+  配套 Jupyter Notebook 零第三方依赖，可直接在线运行。
+authors:
+  - family-names: "Zhang"
+    given-names: "Tengfei"
+    affiliation: "长安大学"
+    email: "【邮箱】"
+version: 1.0.0
+date-released: "2026-09-28"
+license: [MIT, CC-BY-4.0]
+repository-code: "https://github.com/Ali-ZhangTF/hand-calculated-cfd"
+keywords:
+  - 计算流体力学
+  - 有限体积法
+  - SIMPLE 算法
+  - 手算算例
+  - 共轭传热
+  - CFD 教学
+  - computational fluid dynamics
+  - finite volume method
+  - hand calculation
+  - Jupyter Notebook
+preferred-citation:
+  type: software
+  title: "手算复现 CFD：把 Fluent 的黑箱拆开"
+  authors:
+    - family-names: "Zhang"
+      given-names: "Tengfei"
+  year: 2026
+  publisher:
+    name: "Zenodo"
+  url: "https://github.com/Ali-ZhangTF/hand-calculated-cfd"
