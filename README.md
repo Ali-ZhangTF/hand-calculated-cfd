@@ -1,3 +1,4 @@
+[README.md](https://github.com/user-attachments/files/32741744/README.md)
 # 手算复现 CFD：把 Fluent 的黑箱拆开
 
 > **用一支笔，算出 Fluent 里的每一个数。**
@@ -20,6 +21,7 @@
 ### 1. 在线跑（推荐，零安装）
 
 点下面的徽章，用浏览器打开就能运行，不用装任何东西：
+
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Ali-ZhangTF/hand-calculated-cfd/blob/main/手算复现CFD.ipynb)
 
@@ -135,16 +137,16 @@ $-0.0485 \to -0.1299 \to -0.1609 \to \cdots \to -0.3829$。
 
 ## 文件说明
 
-| 文件 | 作用 |
+| 文件 | 你能拿它干什么 |
 |---|---|
-| `手算复现CFD.ipynb` | **主文件**，自包含，零依赖，可交互 |
-| `cavity_v2.py` | 算例 A 求解器：交错网格 SIMPLE（顶盖驱动空腔流） |
-| `heat_solver.py` | 算例 B 求解器：共轭传热 TDMA 逐列推进 |
-| `build_notebook.py` | 从上面两个求解器源码生成 Notebook，保证数与文同源 |
-| `CITATION.cff` | Zenodo 元数据（自动抓取作者与 DOI 信息） |
-| `LICENSE` | 代码 MIT |
-| `知乎文章_免公式版.md` | 中文长文稿，**知乎请发这一个**（知乎不支持 LaTeX） |
-| `知乎文章.md` | 同一篇稿的 LaTeX 公式版，适合支持 MathJax 的平台 |
+| `手算复现CFD.ipynb` | **从这个文件开始**。可交互、零依赖，点上面的 Colab 徽章就能跑 |
+| `cavity_v2.py` | 算例 A 的求解器源码：交错网格 SIMPLE（顶盖驱动空腔流）。Notebook 里算流场的代码就是它 |
+| `heat_solver.py` | 算例 B 的求解器源码：共轭传热，TDMA 逐列推进 |
+| `build_notebook.py` | 把上面两个源码自动组装成 Notebook 的脚本——用来保证"文章里的数"和"代码跑出的数"是同一份 |
+| `CITATION.cff` | 机器可读的引用信息（作者、版本、许可）。文献管理软件和归档平台读的是它 |
+| `LICENSE` | 代码许可全文（MIT） |
+| `知乎文章_免公式版.md` | 同一篇长文的纯文本版，公式改成了代码块和文字，**在不支持公式的平台上读这个** |
+| `知乎文章.md` | 同一篇长文的 LaTeX 公式版，在支持 MathJax 的平台上排版更好看 |
 
 > 所有代码只用 Python 标准库，没有 numpy、没有 matplotlib。
 
@@ -153,23 +155,14 @@ $-0.0485 \to -0.1299 \to -0.1609 \to \cdots \to -0.3829$。
 ## 许可与引用
 
 - **代码**：MIT License
-- **文字与图表**：CC BY 4.0（转载请署名并给出链接）
+- **文字与图表**：CC BY 4.0（转载请署名并给出原始链接）
 
-如果你在教学或研究中用到这份材料，欢迎引用。把仓库 release 一次，
-Zenodo 会自动归档并发一个永久 DOI（见下节）。
+如果你在教学或研究中用到这份材料，欢迎引用：
 
----
-
-## 怎么拿到一个可引用的 DOI（免费）
-
-1. 在 GitHub 上发布一个 Release（打 tag，如 `v1.0.0`）。
-2. 用 GitHub 账号登录 [zenodo.org](https://zenodo.org)，在 *GitHub* 页面启用这个仓库。
-3. 之后每次打新 tag，Zenodo 自动归档并发 DOI，还会镜像到 Software Heritage 长期保存。
-
-**全程零费用。** DOI 可以写进简历，也可以被别人正式引用。
-
-> 提醒：用学校邮箱注册 Zenodo。2026 年起，无学术机构归属的账号可能被降权、
-> 不被外部搜索引擎索引。
+```
+Zhang, Tengfei（2026）. 手算复现 CFD：把 Fluent 的黑箱拆开.
+https://github.com/Ali-ZhangTF/hand-calculated-cfd
+```
 
 ---
 
